@@ -40,7 +40,7 @@ button_show_shoppinglist = tkinter.Button(main, text='Einkaufsliste',
                                           command=show_shoppinglist_fct.show_shoppinglist_fct)
 button_show_shoppinglist.grid(column=1, row=0, padx=10, pady=20)
 
-button_bestand_aendern = tkinter.Button(main, text='Bestand bestehender \n Artikel löschen',
+button_bestand_aendern = tkinter.Button(main, text='Bestand bestehender \n Artikel ändern',
                                         width=button_width, height=button_height,
                                         command=bestand_aendern_fct.bestand_aendern_fct)
 button_bestand_aendern.grid(column=1, row=1, padx=10, pady=20)
