@@ -20,6 +20,7 @@ main.resizable(False, False)
 button_width = 20
 button_height = 4
 
+
 button_show_database = tkinter.Button(main, text='Datenbank anzeigen',
                                       width=button_width, height=button_height,
                                       command=show_database_fct.show_database_fct)
