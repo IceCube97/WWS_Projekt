@@ -8,7 +8,7 @@ def show_bestbeforedate_fct():
     cursor = connection.cursor()
 
     # Query vorbereiten, um Artikel mit art_mhd innerhalb der nächsten 5 Tagen zu bekommen
-    sql = "SELECT * FROM artikel WHERE date(art_mhd) BETWEEN date('now') AND date('now', '+5 days') ORDER BY art_bez"
+    sql = "SELECT * FROM artikel WHERE date(art_mhd) <= date('now', '+5 days') ORDER BY art_mhd ASC"
 
     # Query ausführen und Ergebnisse speichern
     cursor.execute(sql)
@@ -21,7 +21,9 @@ def show_bestbeforedate_fct():
     window.resizable(False, False)
 
     # Label und Listbox im Fenster erstellen
-    label = tkinter.Label(window, text='Artikel mit MHD innerhalb der nächsten 5 Tage:')
+    label = tkinter.Label(window, text='Artikel, deren MHD bereits abgelaufen ist \n und in den nächsten 5 Tagen '
+                                       'erreicht wird: \n'
+                                       '(nach Datum aufsteigend sortiert)')
     label.pack(pady=10)
 
     listbox = tkinter.Listbox(window, width=50)
