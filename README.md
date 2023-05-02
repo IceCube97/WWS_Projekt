@@ -1,5 +1,5 @@
 # WWS_Projekt
-This is my first own project (written with Python). I can track my Inventory, stuff I need to buy regulary, like food or snacks for my dog. 
+This is my first own project. I can track my Inventory, stuff I need to buy regulary, like food or snacks for my dog. 
 So i do not need to look everything up and write a shoppinglist everytime I go to the grocery store. 
 It's like a "Mini-Inventory-Management-System".
 Here, I'm trying to explain what my program does:
