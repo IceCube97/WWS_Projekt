@@ -1,7 +1,4 @@
 """
-# 2.1.Datenbankdatei erstellen
-# ausgeführt am 28.04.2023
-
 import sqlite3
 
 # Verbindung zur Datenbank erzeugen
@@ -21,10 +18,4 @@ sql = ' CREATE TABLE artikel (' \
 cursor.execute(sql)
 """
 
-"""import sqlite3
-
-connection = sqlite3.connect('wws.db')
-cursor = connection.cursor()
-sql = 'ALTER TABLE artikel ADD COLUMN art_mhd DATE'
-cursor.execute(sql)"""
 
