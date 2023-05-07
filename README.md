@@ -21,4 +21,8 @@ Explanation of the functionality of these 6 buttons:
   - "Bestand bestehender Artikel ändern"    : It will show you an alphabetical ordered list of the inventory. You can also click the item and change the stock.
   - "MHD-Liste"                             : You get a list of items whose best before date expires in the next 5 days. (Thought it would be handy to see which foods should be consumed first.)
 
+Database.py
+  - How my database looks like 
+
+
 This is the "main-functionality" I want. But I got already some ideas of extending the database and adding / changing some functionalities.
