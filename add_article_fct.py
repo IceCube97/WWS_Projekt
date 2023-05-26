@@ -60,9 +60,8 @@ def add_article_fct():
 
         # Exception-handling für das MHD, hinzugefügt am 29.04.2023
         try:
-            if not re.match(r'^\d{4}-\d{2}-\d{2}$', art_mhd):
+            if art_mhd and not re.match(r'^\d{4}-\d{2}-\d{2}$', art_mhd):
                 raise ValueError('MHD muss im Format YYYY-MM-DD eingegeben werden.')
-
         except ValueError as e:
             tkinter.messagebox.showerror('Fehler', str(e))
             return
