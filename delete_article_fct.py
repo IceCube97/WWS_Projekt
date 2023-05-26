@@ -20,7 +20,7 @@ def delete_article_fct():
     # Liste der Artikel im Fenster anzeigen
     items = [item[1] for item in data]
     items.sort()
-    listbox = tkinter.Listbox(delete_window, width=50)
+    listbox = tkinter.Listbox(delete_window, width=50, height=20)
     for item in items:
         listbox.insert(tkinter.END, item)
     listbox.pack(pady=10)

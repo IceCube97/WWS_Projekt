@@ -24,6 +24,11 @@ def bestand_aendern_fct():
         treeview.heading(col, text=col)
     treeview.grid(row=0, column=0, padx=10, pady=10, sticky='nsew')
 
+    # Scrollbar hinzufügen
+    scrollbar = tk.Scrollbar(bestand_aendern_window, orient="vertical", command=treeview.yview)
+    treeview.configure(yscrollcommand=scrollbar.set)
+    scrollbar.grid(row=0, column=1, padx=10, pady=10, sticky='ns')
+
     # Daten in Treeview einfügen
     for row in rows:
         treeview.insert('', 'end', values=row)
