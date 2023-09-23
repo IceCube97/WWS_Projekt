@@ -1,25 +1,20 @@
-# Mein WWS - Projekt
-# Start: 27.04.2023
-# ______________________________________________________________________________________________________________________
 import tkinter
 
 import show_bestbeforedate_fct
-import show_database_fct  # Erstellt am 28.04.2023
-import add_article_fct  # Erstellt am 28.04.2023
-import delete_article_fct  # Erstellt am 28.04.2023
-import show_shoppinglist_fct  # Erstellt am 29.04.2023
-import bestand_aendern_fct  # Erstellt am 29.04.2023
+import show_database_fct
+import add_article_fct
+import delete_article_fct
+import show_shoppinglist_fct
+import bestand_aendern_fct
 
-# Hauptfenster erstellt am 27.04.2023
 main = tkinter.Tk()
 main.geometry('350x350')
-main.title('Mini-WWS')
+main.title('Bestandssystem')
 main.resizable(False, False)
 
-# Buttons im Hauptfenster erstellt am 27.04.2023
+
 button_width = 20
 button_height = 4
-
 
 button_show_database = tkinter.Button(main, text='Datenbank anzeigen',
                                       width=button_width, height=button_height,

@@ -35,16 +35,25 @@ def bestand_aendern_fct():
 
     # Funktion, um den Bestand zu ändern
     def change_bestand():
-        selection = treeview.selection()
-        if selection:
-            artikel_nr = treeview.item(selection[0])['values'][0]
-            new_bestand = int(bestand_entry.get())
-            sql = f"UPDATE artikel SET art_bestand = {new_bestand} WHERE art_nr = {artikel_nr}"
-            cursor.execute(sql)
-            connection.commit()
-            # Daten in Treeview aktualisieren
-            treeview.item(selection[0], values=(artikel_nr, treeview.item(selection[0])['values'][1], new_bestand,
-                                                treeview.item(selection[0])['values'][3]))
+        try:
+            selection = treeview.selection()
+            if selection:
+                artikel_nr = treeview.item(selection[0])['values'][0]
+                new_bestand = int(bestand_entry.get())
+
+                # Überprüfen, ob der neue Bestand negativ ist
+                if new_bestand < 0:
+                    raise ValueError("Der Bestand darf nicht negativ sein.")
+
+                sql = f"UPDATE artikel SET art_bestand = {new_bestand} WHERE art_nr = {artikel_nr}"
+                cursor.execute(sql)
+                connection.commit()
+
+                # Daten in Treeview aktualisieren
+                treeview.item(selection[0], values=(artikel_nr, treeview.item(selection[0])['values'][1], new_bestand,
+                                                    treeview.item(selection[0])['values'][3]))
+        except ValueError as e:
+            tkinter.messagebox.showerror('Fehler', str(e))
 
     # Label und Eingabefeld für den neuen Bestand erstellen
     bestand_label = tk.Label(bestand_aendern_window, text='Neuer Bestand:')

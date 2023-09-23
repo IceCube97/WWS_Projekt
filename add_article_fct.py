@@ -1,7 +1,7 @@
 import tkinter
 import tkinter.messagebox
 import sqlite3
-import re  # Hinzugefügt am 29.04.2023, brauche ich für "Exception-handling für das MHD"
+import re
 
 
 def add_article_fct():
@@ -41,7 +41,7 @@ def add_article_fct():
         art_bestand = textbox_art_bestand.get()
         art_mhd = textbox_art_mhd.get()
 
-        # Exception-handling für den Bestand, hinzugefügt am 29.04.2023
+        # Exception-handling für den Bestand
         try:
             art_bestand = int(art_bestand)
             if art_bestand < 0:
@@ -50,7 +50,7 @@ def add_article_fct():
             tkinter.messagebox.showerror('Fehler', 'Der Bestand muss eine positive ganze Zahl sein.')
             return
 
-        # Überprüfen, ob eine Artikelbezeichnung eingegeben wurde, Exception-handling, hinzugefügt am 29.04.2023
+        # Überprüfen, ob eine Artikelbezeichnung eingegeben wurde
         try:
             if len(art_bez) < 3:
                 raise ValueError('Artikelbezeichnung fehlt, min. 3 Buchstaben.')
@@ -58,7 +58,7 @@ def add_article_fct():
             tkinter.messagebox.showerror('Fehler', str(e))
             return
 
-        # Exception-handling für das MHD, hinzugefügt am 29.04.2023
+        # Exception-handling für das MHD
         try:
             if art_mhd and not re.match(r'^\d{4}-\d{2}-\d{2}$', art_mhd):
                 raise ValueError('MHD muss im Format YYYY-MM-DD eingegeben werden.')
