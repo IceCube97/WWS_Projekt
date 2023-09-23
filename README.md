@@ -1,8 +1,8 @@
 # WWS_Projekt
-This is my first own project. I can track my Inventory, stuff I need to buy regulary, like food or snacks for my dog. 
+This is my first own project. I can track my Inventory, stuff I need to buy regulary.
 So i do not need to look everything up and write a shoppinglist everytime I go to the grocery store. 
 It's like a "Mini-Inventory-Management-System".
-Here, I'm trying to explain what my program does:
+Here, I'm explaining what my program does:
 
 "Oberflaeche.py" is the main-window where you can see 6 buttons:
   - "Datenbank anzeigen"                    : show the database;                                     function for this button -> "show_database_fct.py"
@@ -25,4 +25,4 @@ Database.py
   - How my database looks like 
 
 
-This is the "main-functionality" I want. But I got already some ideas of extending the database and adding / changing some functionalities.
+
